@@ -13,6 +13,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from PySide6.QtWidgets import QApplication
 from crypto_tracker.views.main_window import MainWindow
 from crypto_tracker.utils.logger import get_logger
+import qt_material
 
 
 def main():
@@ -22,6 +23,9 @@ def main():
     
     app = QApplication(sys.argv)
     app.setApplicationName("Crypto Tracker")
+    
+    # Apply dark theme
+    qt_material.apply_stylesheet(app, theme="dark_teal.xml")
     
     window = MainWindow()
     window.show()
