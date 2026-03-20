@@ -1,0 +1,5 @@
+"""Utilities."""
+
+from crypto_tracker.utils.logger import get_logger
+
+__all__ = ["get_logger"]
